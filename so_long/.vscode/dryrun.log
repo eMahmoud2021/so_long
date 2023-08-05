@@ -1,0 +1,32 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/memam/Desktop/so_long'
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/main.c -o objs/srcs/main.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/game.c -o objs/srcs/game.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/utile.c -o objs/srcs/utile.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/get_map.c -o objs/srcs/get_map.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/check_map.c -o objs/srcs/check_map.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/deplacements.c -o objs/srcs/deplacements.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/all_init_map.c -o objs/srcs/all_init_map.o
+mkdir -p objs/
+mkdir -p objs/srcs
+gcc -Wall -Werror -Wextra -Imlx -g -c srcs/utile1.c -o objs/srcs/utile1.o
+make -C ./libft
+make -C ./minilibx
+gcc -o game objs/srcs/main.o objs/srcs/game.o objs/srcs/utile.o objs/srcs/get_map.o objs/srcs/check_map.o objs/srcs/deplacements.o objs/srcs/all_init_map.o objs/srcs/utile1.o -Wall -Werror -Wextra -Imlx -g ./minilibx/libmlx.a ./libft/libft.a -lmlx -framework OpenGl -framework AppKit 
+printf "\033[2K\r\033[0;32m[file created]]\033[0m game\e[0m\n"
+make: Leaving directory `/Users/memam/Desktop/so_long'
+ 
